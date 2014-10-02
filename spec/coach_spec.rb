@@ -34,10 +34,4 @@ describe Coach do
 		expect(coach.full?).to be true
 	end
 
-	it "should reject a passenger if full" do
-		coach = Coach.new
-		40.times{coach.board(passenger)}
-		expect{coach.board(passengers).to raise_error(RuntimeError)}
-	end
-
 end
