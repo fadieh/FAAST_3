@@ -11,4 +11,12 @@ describe Station do
 		expect(station.platform.count).to eq 1
 	end
 
+	it "allow trains to leave the platform" do
+		station = Station.new
+		station.train_dock(train)
+		expect(station.platform.count).to eq 1
+		station.train_depart(train)
+		expect(station.platform.count).to eq 0
+	end
+
 end
