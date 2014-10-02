@@ -14,4 +14,5 @@ class Train
 		@coaches << coach
 	end
 
+
 end

@@ -18,5 +18,4 @@ describe Train do
 		train.attach_coaches(coach)
 		expect(train.whole_train.count).to eq 1
 	end
-
 end
