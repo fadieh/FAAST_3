@@ -27,16 +27,17 @@ describe Station do
 
 	it 'should check in the passenger' do
 		expect(passenger).to receive(:touch_into_station)
-
 		station.accept_passenger(passenger)
 	end
 
 	it "should release passengers" do
-		allow(passenger).to receive(:touch_into_station)
-		station.accept_passenger(passenger)
-		expect(station.passengers.count).to eq 1
+		allow(passenger).to receive(:touch_out_of_station)
 		station.release_passenger(passenger)
 		expect(station.passengers.count).to eq 0
 	end
 
+	it "should check out the passenger" do
+		expect(passenger).to receive(:touch_out_of_station)
+		station.release_passenger(passenger)
+	end
 end

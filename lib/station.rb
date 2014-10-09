@@ -27,6 +27,7 @@ class Station
 	end
 
 	def release_passenger(passenger)
+		passenger.touch_out_of_station
 		@passengers.delete(passenger)
 	end
 
