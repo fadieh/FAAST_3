@@ -22,6 +22,7 @@ class Station
 	end
 
 	def accept_passenger(passenger)
+		passenger.touch_into_station
 		@passengers << passenger
 	end
 
@@ -39,10 +40,6 @@ class Station
 
 	def is_sunday?
 		time.thursday?
-	end
-
-	def close_on_sunday
-		self.freeze
 	end
 
 
