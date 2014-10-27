@@ -31,19 +31,4 @@ class Station
 		@passengers.delete(passenger)
 	end
 
-	def time
-		time = Time.new
-	end
-
-	def sunday
-		@time
-	end
-
-	def is_sunday?
-		time.thursday?
-	end
-
-
-
-
 end

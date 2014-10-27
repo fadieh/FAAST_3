@@ -23,7 +23,9 @@ require 'passenger'
 	end
 
 	it "should be able to enter a coach once touched into the station" do
-		
+		passenger.touch_into_station
 	end
+
+	
 
 end

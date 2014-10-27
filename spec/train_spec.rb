@@ -29,9 +29,12 @@ describe Train do
 	end
 
 	it "should travel from station to station" do
-		train.enter_station
 	end
 
+	it "can be taken out of service" do
+		train.take_out_of_service
+		expect(train.not_running). to be true
+	end
 
 
 end

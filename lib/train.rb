@@ -1,7 +1,8 @@
 class Train
 
 	attr_reader :coaches
-	attr_reader :at_station
+	attr_reader :at_station	
+	attr_accessor :not_running
 
 	def initialize
 		@coaches = []
@@ -25,6 +26,10 @@ class Train
 
 	def leave_station
 		@at_station = false
+	end
+
+	def take_out_of_service
+		@not_running = true
 	end
 
 end

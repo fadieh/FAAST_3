@@ -14,4 +14,6 @@ class Passenger
 		@checked_in = false
 	end
 
+	
+
 end
