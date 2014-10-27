@@ -1,11 +1,12 @@
 class Station
 
 	attr_reader :name
+	attr_reader :line
 
 	def initialize
 		@platform = []
 		@passengers = []
-
+		@name = ''
 	end
 
 	def platform
@@ -36,6 +37,10 @@ class Station
 
 	def set_name(station)
 		@name = station
+	end
+
+	def set_line(line)
+		@line = line
 	end
 	
 end

@@ -48,4 +48,9 @@ describe Station do
 		expect(station.passengers.count).to eq 0
 	end
 
+	it "has a line" do
+		station.set_line('northern')
+		expect(station.line).to eq('northern')
+	end
+
 end
