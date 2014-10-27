@@ -1,8 +1,11 @@
 class Station
 
+	attr_reader :name
+
 	def initialize
 		@platform = []
 		@passengers = []
+
 	end
 
 	def platform
@@ -29,6 +32,10 @@ class Station
 	def release_passenger(passenger)
 		passenger.touch_out_of_station
 		@passengers.delete(passenger)
+	end
+
+	def set_name(station)
+		@name = station
 	end
 	
 end

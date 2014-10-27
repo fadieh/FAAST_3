@@ -6,10 +6,10 @@ describe Station do
 	let(:passenger) { double :passenger }
 	let(:station) { Station.new }
 
-	# it "has a name" do
-	# 	station.set_name('old street')
-	# 	expect(station.name).to eq('old street')
-	# end
+	it "has a name" do
+		station.set_name('old street')
+		expect(station.name).to eq('old street')
+	end
 
 	it "should be able to hold trains" do
 		expect(station.platform.count).to eq 0
