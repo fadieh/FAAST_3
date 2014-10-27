@@ -35,6 +35,12 @@ require 'passenger'
 		expect(passenger.balance).to eq(1)
 	end
 
+	it "should take away £1 from balance when checking in" do
+		passenger.top_up(1)
+		passenger.touch_into_station
+		expect(passenger.balance).to eq(0)
+	end
+
 	it "should register their details for balance" do
 		passenger.register_name('fadie')
 		passenger.register_address('high street')	
@@ -46,5 +52,6 @@ require 'passenger'
 		passenger.report_missing
 		expect(passenger.missing_card).to eq(true)
 	end
+
 
 end

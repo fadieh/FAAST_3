@@ -13,6 +13,7 @@ class Passenger
 
 	def touch_into_station
 		@checked_in = true
+		@balance = @balance - 1
 	end
 
 	def touch_out_of_station

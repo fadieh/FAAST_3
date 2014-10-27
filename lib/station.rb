@@ -6,7 +6,7 @@ class Station
 	def initialize
 		@platform = []
 		@passengers = []
-		@name = ''
+		@name = []
 	end
 
 	def platform
