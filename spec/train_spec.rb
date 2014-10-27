@@ -36,5 +36,11 @@ describe Train do
 		expect(train.not_running). to be true
 	end
 
+	it "can be put back into service" do
+		train.take_out_of_service
+		train.put_back_into_service
+		expect(train.not_running).to be false
+	end
+
 
 end

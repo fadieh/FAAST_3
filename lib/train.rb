@@ -32,4 +32,8 @@ class Train
 		@not_running = true
 	end
 
+	def put_back_into_service
+		@not_running = false
+	end
+
 end
