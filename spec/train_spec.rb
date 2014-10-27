@@ -42,5 +42,10 @@ describe Train do
 		expect(train.not_running).to be false
 	end
 
+	it "can be vandalised" do
+		train.is_vandalised
+		expect(train.vandalised).to be true
+	end
+
 
 end
