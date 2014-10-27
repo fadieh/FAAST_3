@@ -28,7 +28,9 @@ describe Train do
 		expect(train.at_station). to be true
 	end
 
-	it "should travel from station to station" do
+	it "should tell you which station its docked at" do
+		train.dock_at('old street')
+		expect(train.docked_at).to eq('old street')
 	end
 
 	it "can be taken out of service" do
@@ -47,5 +49,28 @@ describe Train do
 		expect(train.vandalised).to be true
 	end
 
+	it "should be withdrawn if vandalised" do
+		train.is_vandalised
+		expect(train.not_running).to be true
+	end
+
+	it "should be fixed if vandalised" do
+		train.is_vandalised
+		train.fix_train
+		expect(train.not_running).to be false
+	end
+
+	it "should not be at a station when it leaves the station" do
+		train.dock_at('old street')
+		expect(train.docked_at).to eq('old street')
+		train.leave_station
+		expect(train.docked_at).to eq false
+	end
+
+	# it "can only be at 1 station when it docks at a station" do
+	# 	train.dock_at('old street')
+	# 	train.dock_at('shoreditch')
+	# 	expect(train.docked_at).to eq('old street')
+	# end
 
 end

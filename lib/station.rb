@@ -30,5 +30,5 @@ class Station
 		passenger.touch_out_of_station
 		@passengers.delete(passenger)
 	end
-
+	
 end

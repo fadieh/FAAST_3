@@ -26,6 +26,25 @@ require 'passenger'
 		passenger.touch_into_station
 	end
 
-	
+	it "should initialise with a balance" do
+		expect(passenger.balance).to eq(0)
+	end
+
+	it "should be able to top up balance" do
+		passenger.top_up(1)
+		expect(passenger.balance).to eq(1)
+	end
+
+	it "should register their details for balance" do
+		passenger.register_name('fadie')
+		passenger.register_address('high street')	
+		expect(passenger.name).to eq('fadie')
+		expect(passenger.address).to eq('high street')
+	end
+
+	it "should report oyster card missing" do
+		passenger.report_missing
+		expect(passenger.missing_card).to eq(true)
+	end
 
 end
