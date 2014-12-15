@@ -67,10 +67,4 @@ describe Train do
 		expect(train.docked_at).to eq false
 	end
 
-	# it "can only be at 1 station when it docks at a station" do
-	# 	train.dock_at('old street')
-	# 	train.dock_at('shoreditch')
-	# 	expect(train.docked_at).to eq('old street')
-	# end
-
 end

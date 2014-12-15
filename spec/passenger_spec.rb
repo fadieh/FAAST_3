@@ -53,9 +53,4 @@ require 'passenger'
 		expect(passenger.missing_card).to eq(true)
 	end
 
-	# it "can cancel oyster card" do
-	# 	passenger.cancel_oyster
-	# 	expect(passenger.)
-	# end
-
 end
